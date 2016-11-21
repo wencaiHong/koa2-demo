@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  p Welcome to #{sb}
+  form(action="/hello/s",method="post")
+    ul
+      li
+        label 姓名：
+        input(name="username")
+      li
+        label 联系电话：
+        input(name="tel")
+      li
+        label
+          input(type="radio",name="sex",value="male")
+          | 男
+        label
+          input(type="radio",name="sex",value="female")
+          | 女
+      li
+        button 提交
